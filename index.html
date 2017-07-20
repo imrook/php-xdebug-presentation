@@ -50,112 +50,115 @@
 
 				<section>
 					<h2>Introducting XDebug</h2>
-                    <p>
-                        XDebug provides a number of tools to assist with developing and debugging PHP applications.
-                        <a href="https://xdebug.org/docs/">https://xdebug.org/docs/</a>
-                    </p>
-                </section>
+					<p>
+						XDebug provides a number of tools to assist with developing and debugging PHP applications.
+						<a href="https://xdebug.org/docs/">https://xdebug.org/docs/</a>
+					</p>
+				</section>
 
-                <section>
+				<section>
 					<h2>Remote Debugging</h2>
 					<p>
-                        XDebug acts the <em>client</em> and the IDE as the <em>server</em>
-                        <a href="https://xdebug.org/docs/remote">https://xdebug.org/docs/remote</a>
+						XDebug acts the <em>client</em> and the IDE as the <em>server</em>
+						<a href="https://xdebug.org/docs/remote">https://xdebug.org/docs/remote</a>
 					</p>
 				</section>
 
-                <section>
+				<section>
 					<h2>How it works</h2>
-                    <p>
-                        It's a php module that intercepts every request and 
-                    </p>
-                    <p>
-                        Uses dbgp protocol
-                        <a href="https://xdebug.org/docs-dbgp.php">https://xdebug.org/docs-dbgp.php</a>
-                    </p>
+					<p>
+						It's a php module that intercepts every request and 
+					</p>
+					<p>
+						Uses dbgp protocol
+						<a href="https://xdebug.org/docs-dbgp.php">https://xdebug.org/docs-dbgp.php</a>
+					</p>
 				</section>
 
-                <section>
+				<section>
 					<h2>Installation</h2>
-                    <p class="fragment">
-                        Use docker! Someone already created an image here <a>https://github.com/MiLk/docker-php-xdebug</a>
+					<p class="fragment">
+						Use docker! Someone already created an image here <a>https://github.com/MiLk/docker-php-xdebug</a>
 					</p>
 
-                    <p class="fragment">
-                        It wouldn't connect to my docker host. I have a fork with a branch that does:
-                        <a href="https://github.com/imrook/docker-php-xdebug/tree/docker">https://github.com/imrook/docker-php-xdebug/tree/docker</a>
+					<p class="fragment">
+						It wouldn't connect to my docker host. I have a fork with a branch that does:
+						<a href="https://github.com/imrook/docker-php-xdebug/tree/docker">https://github.com/imrook/docker-php-xdebug/tree/docker</a>
 					</p>
 				</section>
 
-                <section>
+				<section>
 					<h2>Configure debugger</h2>
-                    <ul>
-                        <li>PHPStorm</li>
-                        <li>VDebug for vim <a href="https://github.com/joonty/vdebug">https://github.com/joonty/vdebug</a></li>
-                    </ul>
+					<ul>
+						<li>PHPStorm</li>
+						<li>VDebug for vim <a href="https://github.com/joonty/vdebug">https://github.com/joonty/vdebug</a></li>
+					</ul>
 				</section>
 
-                <section>
+				<section>
 					<h2>Starting a session</h2>
-                    <p class="fragment">
-                        Use <code>XDEBUG_SESSION_START</code> request variable. Browsers will persist a cookie for future requests.
+					<p class="fragment">
+						Use <code>XDEBUG_SESSION_START</code> request variable. Browsers will persist a cookie for future requests.
 					</p>
-                    <p class="fragment">
-                        <code>xdebug.remote_autostart</code> will attempt to start session on every request.
+					<p class="fragment">
+						<code>xdebug.remote_autostart</code> will attempt to start session on every request.
 					</p>
 				</section>
 
-                <section>
+				<section>
 					<h2>Let's use it!</h2>
 
-                    <p class="fragment">
-                        Start a session
+					<p class="fragment">
+						Start a session
 					</p>
 
-                    <p class="fragment">
-                        Breakpoints
+					<p class="fragment">
+						Breakpoints
 					</p>
 
-                    <p class="fragment">
-                        Watches
+					<p class="fragment">
+						Watches
 					</p>
 
-                    <p class="fragment">
-                        Stepping
+					<p class="fragment">
+						Stepping
 					</p>
 
-                    <p class="fragment">
-                        Ending a session
+					<p class="fragment">
+						Ending a session
 					</p>
 				</section>
 
-                <section>
+				<section>
 					<h2>Real-world use case</h2>
-                    <p>
-                        Why doesn't <code>xdebug.remote_connect_back</code> work with docker?
-                    </p>
-                </section>
-
-                <section>
-					<h2>Introducing Psysh</h2>
-                    <p>
-                        REPL (Read Eval Print Loop) for PHP
+					<p>
+						Why doesn't <code>xdebug.remote_connect_back</code> work with docker?
 					</p>
-                    <ul>
-                        <li><a href="https://github.com/bobthecow/psysh/">https://github.com/bobthecow/psysh/</a></li>
-                        <li><a href="http://psysh.org/">http://psysh.org/</a></li>
-                        <li><a href="https://presentate.com/bobthecow/talks/php-for-pirates">https://presentate.com/bobthecow/talks/php-for-pirates</a></li>
-                    </ul>
 				</section>
 
-                <section>
-					<h2>Installation</h2>
-                    <code>composer g require psy/psysh:@stable</code>
+				<section>
+					<h2>Introducing Psysh</h2>
+					<p>
+						REPL (Read Eval Print Loop) for PHP
+					</p>
+					<ul>
+						<li><a href="https://github.com/bobthecow/psysh/">https://github.com/bobthecow/psysh/</a></li>
+						<li><a href="http://psysh.org/">http://psysh.org/</a></li>
+						<li><a href="https://presentate.com/bobthecow/talks/php-for-pirates">https://presentate.com/bobthecow/talks/php-for-pirates</a></li>
+					</ul>
 				</section>
 
-                <section>
+				<section>
 					<h2>Installation</h2>
-                    <code>composer g require psy/psysh:@stable</code>
+					<code>composer g require psy/psysh:@stable</code>
+				</section>
+
+				<section>
+					<h2>Use as a debugger</h2>
+					<p>Add this to the code you want to debug:</p>
+					<code>require('/path/to/psysh');</code>
+					<p>And add this where you want to drop into a shell:</p>
+					<code>eval(\Psy\sh());</code>
 				</section>
 
 			</div>
